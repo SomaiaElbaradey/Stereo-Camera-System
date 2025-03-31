@@ -44,3 +44,5 @@ def calibrate_cameras(calibration_images_path, chessboard_size=(9, 7)):
    
     return ret, mtx, dist, rvecs, tvecs
  
+def print():
+    print("just trail")
