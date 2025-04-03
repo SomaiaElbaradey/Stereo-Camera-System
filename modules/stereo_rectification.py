@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
-import glob
-import os
+import matplotlib.pyplot as plt
 
 def stereo_rectification(left_img_path, right_img_path, mtx1, dist1, mtx2, dist2):
     """
@@ -40,6 +39,20 @@ def stereo_rectification(left_img_path, right_img_path, mtx1, dist1, mtx2, dist2
     # Apply the rectification
     rectified_left = cv2.remap(left_img, map1x, map1y, cv2.INTER_LINEAR)
     rectified_right = cv2.remap(right_img, map2x, map2y, cv2.INTER_LINEAR)
+
+    # Plot the rectified images
+    plt.figure(figsize=(10, 5))
+    plt.subplot(1, 2, 1)
+    plt.imshow(cv2.cvtColor(rectified_left, cv2.COLOR_BGR2RGB))
+    plt.title('Rectified Left Image')
+    plt.axis('off')
+
+    plt.subplot(1, 2, 2)
+    plt.imshow(cv2.cvtColor(rectified_right, cv2.COLOR_BGR2RGB))
+    plt.title('Rectified Right Image')
+    plt.axis('off')
+
+    plt.tight_layout()
+    plt.show()
  
     return rectified_left, rectified_right
- 

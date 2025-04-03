@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 def feature_detection_and_matching(left_img, right_img):
     """
@@ -65,4 +65,11 @@ def feature_detection_and_matching(left_img, right_img):
         flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS
     )
     
+    # Display matched features
+    plt.figure(figsize=(15, 10))
+    plt.imshow(matched_image)
+    plt.title(f'Matched Features: {len(good_matches)} matches')
+    plt.axis('off')
+    plt.show()
+
     return matched_image, good_matches
