@@ -72,4 +72,4 @@ def feature_detection_and_matching(left_img, right_img):
     plt.axis('off')
     plt.show()
 
-    return matched_image, good_matches
+    return matched_image, good_matches, keypoints1, keypoints2

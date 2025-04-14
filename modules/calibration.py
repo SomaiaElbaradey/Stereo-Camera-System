@@ -70,4 +70,4 @@ def calibrate_camera(calibration_dir="cal", pattern_size=(9, 7), square_size=15.
         K=K, dist=dist, rvecs=rvecs, tvecs=tvecs,
         detected_images=detected_images
     )
-    return ret ,K, dist , rvecs, tvecs
+    return K, dist 
