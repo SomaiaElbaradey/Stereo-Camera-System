@@ -48,12 +48,10 @@ pip install opencv-python numpy matplotlib open3d
 1. Clone this repository:
 
    ```bash
+   git clone [https://github.com/SomaiaElbaradey/Stereo-Camera-System.git](https://github.com/SomaiaElbaradey/Stereo-Camera-System.git)
+   cd Stereo-Camera-System
    ```
 
-git clone [https://github.com/SomaiaElbaradey/Stereo-Camera-System.git](https://github.com/SomaiaElbaradey/Stereo-Camera-System.git)
-cd Stereo-Camera-System
-
-````
 2. Install dependencies (see above).
 3. Prepare your data:
    - Calibration: place chessboard images (`cal*.jpg`) in `cal/`.
