@@ -1,7 +1,5 @@
 import cv2
 import numpy as np
-import glob
-import os
 
 def estimate_stereo_geometry(keypoints1, keypoints2, good_matches, K):
     """
